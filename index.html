@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Integración · Simpson 1/3</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body><main>
+<header><span class="tag">MÉTODOS NUMÉRICOS · SESIÓN 13</span><h1>Energía de los servidores</h1><p>Integración con la regla de Simpson 1/3 compuesta</p><div class="formula">P(t) = 10 + 5t sen(πt/6) + e<sup>0,2t</sup></div></header>
+<section><h2>Datos de entrada</h2><form id="form" novalidate><label>Límite inferior a (h)<input id="a" type="number" step="any" value="0" required></label><label>Límite superior b (h)<input id="b" type="number" step="any" value="6" required></label><label>Subintervalos n<input id="n" type="number" step="1" min="2" value="6" required></label><button>Calcular integral</button></form><p id="error" role="alert" hidden></p></section>
+<div id="results" hidden>
+<section class="metrics"><div><span>Energía aproximada</span><strong id="energy"></strong><small>kWh</small></div><div><span>Ancho del subintervalo</span><strong id="step"></strong><small>h</small></div><div><span>Cota con M de la guía*</span><strong id="bound"></strong><small>kWh</small></div></section>
+<section><h2>Tabla de evaluación</h2><p>Coeficientes: 1, 4, 2, 4, …, 2, 4, 1.</p><div class="scroll"><table><thead><tr><th>i</th><th>tᵢ (h)</th><th>P(tᵢ) (kW)</th><th>Coeficiente</th></tr></thead><tbody id="evaluation"></tbody></table></div><p id="table-note"></p></section>
+<section><h2>Análisis de convergencia</h2><p>Se mantienen los límites ingresados y se varía el número de subintervalos.</p><div class="scroll"><table><thead><tr><th>n</th><th>h (h)</th><th>Integral (kWh)</th><th>Cota M = 0,45* (kWh)</th><th>Cota segura (kWh)</th></tr></thead><tbody id="convergence"></tbody></table></div></section>
+<section class="note"><h2>Sobre la cota del error</h2><p>|Eₜ| ≤ (b − a) h⁴ M / 180.</p><p>* Se muestra M = 0,45 como solicita la guía. Este dato no es una cota válida para la función en [0,6], pues |P⁽⁴⁾(0)| ≈ 2,869 &gt; 0,45.</p><p id="safe-note"></p></section>
+</div><footer>HTML, CSS y JavaScript · Funciona sin conexión ni instalaciones.</footer>
+</main></body></html>

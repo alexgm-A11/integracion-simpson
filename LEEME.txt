@@ -1,0 +1,7 @@
+PROGRAMA DE INTEGRACION
+Abra index.html con doble clic. Mantenga styles.css y app.js en la misma carpeta.
+No requiere internet, servidor ni instalación.
+Ingrese a, b y un n entero positivo par. El programa aplica Simpson compuesto,
+usa un vector de coeficientes e imprime la tabla de convergencia solicitada.
+Valores de la guía: a=0, b=6, n=6.
+La cota M=0.45 se identifica como dato de la guía y se muestra también una cota válida.
